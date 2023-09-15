@@ -1,6 +1,6 @@
 {
   "name": "@giant-leaps/nanostores-stencil",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stencil integration for Nano Stores, a tiny state manager with many atomic tree-shakable stores",
   "keywords": [
     "store",
@@ -9,9 +9,9 @@
     "nanostores",
     "stencil"
   ],
-  "author": "Jake Danton <jake@giantleaps.dev",
+  "author": "Jake Danton <jake@giantleaps.dev>",
   "license": "MIT",
-  "repository": "gls/nanostores-stencil",
+  "repository": "giant-leaps/nanostores-stencil",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [

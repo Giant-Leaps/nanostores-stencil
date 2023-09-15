@@ -8,7 +8,7 @@ import { Store } from "nanostores";
  * ```ts
  * import { Component } from '@stencil/core';
  * import { atom } from 'nanostores';
- * import { MultiStoreSubscription } from '@gls/nanostores-stencil';
+ * import { MultiStoreSubscription } from '@giant-leaps/nanostores-stencil';
  *
  * const count1 = atom(0);
  * const count2 = atom(0);

@@ -52,18 +52,18 @@ Use it as a decorator with `@useStores`:
  import { Component } from '@stencil/core';
  import { atom } from 'nanostores';
  import { MultiStoreSubscription } from '@gls/nanostores-stencil';
- 
+
  const count1 = atom(0);
  const count2 = atom(0);
-   
+
  @Component({
    tag: 'my-element',
     // additional options
   })
   class MyElement {
-  
+
   private countsSubscription = new MultiStoreSubscription(this, [count1, count2]);
- 
+
   render() {
    const [$count1, $count2] = countsSubscription.values;
    return html\`Count 1: \${count1}\, Count 2: \${count2}\`;

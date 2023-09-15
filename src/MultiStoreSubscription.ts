@@ -1,4 +1,4 @@
-import { forceUpdate, getRenderingRef } from '@stencil/core';
+import { forceUpdate, getRenderingRef } from "@stencil/core";
 import { Store } from "nanostores";
 
 /**
@@ -12,15 +12,15 @@ import { Store } from "nanostores";
  *
  * const count1 = atom(0);
  * const count2 = atom(0);
- *  
+ *
  * @Component({
  *  tag: 'my-element',
  *   // additional options
  * })
  * class MyElement {
- * 
+ *
  * private countsSubscription = new MultiStoreSubscription(this, [count1, count2]);
- * 
+ *
  *  render() {
  *   const [$count1, $count2] = countsSubscription.values;
  *   return html\`Count 1: \${count1}\, Count 2: \${count2}\`;
@@ -30,27 +30,27 @@ import { Store } from "nanostores";
  */
 export class MultiStoreSubscription<
   TAtoms extends [] | ReadonlyArray<Store<unknown>>
->
-{
+> {
   private unsubscribes: (() => void)[] = [];
 
   constructor(private hostElement: object, private atoms: TAtoms) {
-    if (typeof getRenderingRef !== 'function') {
-      console.warn("You are not in a stencil project. UseStores will do nothing.");
+    if (typeof getRenderingRef !== "function") {
+      console.warn(
+        "You are not in a stencil project. UseStores will do nothing."
+      );
       return;
     }
 
     this.unsubscribes = atoms.map((atom) => {
       return atom.subscribe(() => {
         forceUpdate(hostElement);
-      })
-    }
-    );
+      });
+    });
   }
 
   destructor() {
     this.unsubscribes.forEach((unsubscribe) => unsubscribe());
- }
+  }
 
   /**
    * The current values of the atoms.

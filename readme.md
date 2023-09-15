@@ -25,25 +25,25 @@ Install it using one of the following commands:
 ### npm
 
 ```bash
-npm add nanostores @gls/nanostores-stencil
+npm add nanostores @giant-leaps/nanostores-stencil
 ```
 
 ### bun
 
 ```bash
-bun add nanostores @gls/nanostores-stencil
+bun add nanostores @giant-leaps/nanostores-stencil
 ```
 
 ### pnpm
 
 ```bash
-pnpm add nanostores @gls/nanostores-stencil
+pnpm add nanostores @giant-leaps/nanostores-stencil
 ```
 
 ### yarn
 
 ```bash
-yarn add nanostores @gls/nanostores-stencil
+yarn add nanostores @giant-leaps/nanostores-stencil
 ```
 
 Use it as a decorator with `@useStores`:
@@ -51,7 +51,7 @@ Use it as a decorator with `@useStores`:
 ```ts
  import { Component } from '@stencil/core';
  import { atom } from 'nanostores';
- import { MultiStoreSubscription } from '@gls/nanostores-stencil';
+ import { MultiStoreSubscription } from '@giant-leaps/nanostores-stencil';
 
  const count1 = atom(0);
  const count2 = atom(0);

@@ -9,7 +9,7 @@ import { MultiStoreSubscription } from "./MultiStoreSubscription";
  * ```ts
  * import { Component } from '@stencil/core';
  * import { atom } from 'nanostores';
- * import { StoreSubscription } from '@gls/nanostores-stencil';
+ * import { StoreSubscription } from '@giant-leaps/nanostores-stencil';
  *
  * const count = atom(0);
  *
